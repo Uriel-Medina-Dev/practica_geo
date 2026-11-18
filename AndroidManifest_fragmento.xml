@@ -1,0 +1,2 @@
+# Agrega esta línea AL FINAL de android/local.properties (ese archivo ya viene en .gitignore)
+maps.apikey=AIzaSyTuClaveSecretaAqui
