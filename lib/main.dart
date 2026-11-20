@@ -1,31 +1,26 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
-
 // El token NO va en el código: se inyecta al compilar con
 //   flutter run --dart-define-from-file=dart_defines.json
 const String kMapboxToken = String.fromEnvironment('MAPBOX_TOKEN');
-
 void main() => runApp(const MyApp());
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Localizador Mapbox',
+      title: 'Localizador',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(colorSchemeSeed: Colors.green, useMaterial3: true),
       home: const MapaPage(),
     );
   }
 }
-
 class MapaPage extends StatefulWidget {
   const MapaPage({super.key});
 
@@ -167,7 +162,7 @@ class _MapaPageState extends State<MapaPage> {
     }
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Localizador (Mapbox)')),
+      appBar: AppBar(title: const Text('Localizador')),
       body: Stack(
         children: [
           FlutterMap(
